@@ -64,7 +64,7 @@ fn main() -> ! {
     let mut wdt1 = timer_group1.wdt;
     {%- endif %}
 
-    {% if mcu == "esp32c3" -%}
+    {%- if mcu == "esp32c3" %}
     rtc.swd.disable();
     {%- endif %}
     rtc.rwdt.disable();
